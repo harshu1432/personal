@@ -1,0 +1,20 @@
+{% extends 'register.html' %}
+
+{% block body_block %}
+        <center>
+            <h1>Log-in Form</h1>
+            <div class='jumbotron'>
+        <form action="{% url 'login' %}" method='POST'>
+                {% csrf_token %}
+                <table width='200px' height='200px'>
+                    <tr>
+                <td><b>User_name:</b></td><td><input type='text' name='username'></td></tr>
+
+               <tr><td><b> Password:</b></td><td><input type='password' name='password'></td></tr>
+                <tr><td><input type='submit' value='Login'></td><td><input type='reset' value='Reset'></td></tr>
+            </table>
+            </form>
+            </div>
+        </center>     
+    
+        {% endblock body_block %}
